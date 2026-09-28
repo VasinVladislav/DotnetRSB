@@ -1,5 +1,8 @@
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\appsettings.Development.json
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\appsettings.json
+C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\DataSeed\HeaderMenuData\business.json
+C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\DataSeed\HeaderMenuData\individuals.json
+C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\DataSeed\HeaderMenuData\private.json
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\BankApi.staticwebassets.endpoints.json
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\BankApi.exe
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\BankApi.deps.json
@@ -129,3 +132,4 @@ C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\refint\Ba
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\BankApi.pdb
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\BankApi.genruntimeconfig.cache
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\ref\BankApi.dll
+C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\DataSeed\LocationMenuData\regions.json

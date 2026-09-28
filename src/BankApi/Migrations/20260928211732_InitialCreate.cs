@@ -27,6 +27,20 @@ namespace BankApi.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "LocationRegion",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Text = table.Column<string>(type: "text", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LocationRegion", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "LevelTwoMenu",
                 columns: table => new
                 {
@@ -45,6 +59,27 @@ namespace BankApi.Migrations
                         name: "FK_LevelTwoMenu_LevelOneMenu_LevelOneMenuId",
                         column: x => x.LevelOneMenuId,
                         principalTable: "LevelOneMenu",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "LocationCity",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Name = table.Column<string>(type: "text", nullable: false),
+                    Text = table.Column<string>(type: "text", nullable: false),
+                    LocationRegionId = table.Column<int>(type: "integer", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LocationCity", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_LocationCity_LocationRegion_LocationRegionId",
+                        column: x => x.LocationRegionId,
+                        principalTable: "LocationRegion",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -81,6 +116,11 @@ namespace BankApi.Migrations
                 name: "IX_LevelTwoMenu_LevelOneMenuId",
                 table: "LevelTwoMenu",
                 column: "LevelOneMenuId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_LocationCity_LocationRegionId",
+                table: "LocationCity",
+                column: "LocationRegionId");
         }
 
         /// <inheritdoc />
@@ -90,7 +130,13 @@ namespace BankApi.Migrations
                 name: "LevelThreeMenu");
 
             migrationBuilder.DropTable(
+                name: "LocationCity");
+
+            migrationBuilder.DropTable(
                 name: "LevelTwoMenu");
+
+            migrationBuilder.DropTable(
+                name: "LocationRegion");
 
             migrationBuilder.DropTable(
                 name: "LevelOneMenu");

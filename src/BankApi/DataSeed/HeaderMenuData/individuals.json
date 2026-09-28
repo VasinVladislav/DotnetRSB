@@ -1,0 +1,281 @@
+{
+  "Name": "individuals",
+  "Text": "Частным клиентам",
+  "SortOrder": 1,
+  "Items": [
+    {
+      "Name": "credit",
+      "Text": "Кредиты",
+      "Icon": "percent",
+      "SortOrder": 1,
+      "Items": [
+        {
+          "Name": "cash_credit",
+          "Text": "Кредит наличными",
+          "Href": "#",
+          "SortOrder": 1
+        },
+        {
+          "Name": "car_credit",
+          "Text": "Автокредит",
+          "Href": "#",
+          "SortOrder": 2
+        },
+        {
+          "Name": "refinancing_credit",
+          "Text": "Рефинансирование кредитов",
+          "Href": "#",
+          "SortOrder": 3
+        },
+        {
+          "Name": "education_credit",
+          "Text": "Образовательный кредит с господдержкой",
+          "Href": "#",
+          "SortOrder": 4
+        }
+      ]
+    },
+    {
+      "Name": "house",
+      "Text": "Ипотека",
+      "Icon": "house",
+      "SortOrder": 2,
+      "Items": [
+        {
+          "Name": "mortgage_selection",
+          "Text": "Подбор ипотеки",
+          "Href": "#",
+          "SortOrder": 1
+        },
+        {
+          "Name": "secondary_housing",
+          "Text": "Вторичное жильё",
+          "Href": "#",
+          "SortOrder": 2
+        },
+        {
+          "Name": "house_mortgage",
+          "Text": "Ипотека на дом",
+          "Href": "#",
+          "SortOrder": 3
+        },
+        {
+          "Name": "family_mortgage",
+          "Text": "Семейная",
+          "Href": "#",
+          "SortOrder": 4
+        },
+        {
+          "Name": "new_buildings",
+          "Text": "Новостройки",
+          "Href": "#",
+          "SortOrder": 5
+        },
+        {
+          "Name": "it_mortgage",
+          "Text": "Для ИТ-специалистов",
+          "Href": "#",
+          "SortOrder": 6
+        },
+        {
+          "Name": "commercial_real_estate",
+          "Text": "Коммерческая недвижимость",
+          "Href": "#",
+          "SortOrder": 7
+        }
+      ]
+    },
+    {
+      "Name": "card",
+      "Text": "Карты",
+      "Icon": "card",
+      "SortOrder": 3,
+      "Items": [
+        {
+          "Name": "debit_cards",
+          "Text": "Дебетовые",
+          "Href": "#",
+          "SortOrder": 1
+        },
+        {
+          "Name": "credit_cards",
+          "Text": "Кредитные",
+          "Href": "#",
+          "SortOrder": 2
+        },
+        {
+          "Name": "mir_pay",
+          "Text": "Mir Pay",
+          "Href": "#",
+          "SortOrder": 3
+        }
+      ]
+    },
+    {
+      "Name": "deposits",
+      "Text": "Вклады",
+      "Icon": "bag",
+      "SortOrder": 4,
+      "Items": [
+        {
+          "Name": "new_money_deposit",
+          "Text": "Вклад для новых денег",
+          "Href": "#",
+          "SortOrder": 1
+        },
+        {
+          "Name": "pension_deposit",
+          "Text": "Пенсионный вклад",
+          "Href": "#",
+          "SortOrder": 2
+        },
+        {
+          "Name": "social_deposit",
+          "Text": "Социальный вклад",
+          "Href": "#",
+          "SortOrder": 3
+        }
+      ]
+    },
+    {
+      "Name": "investments",
+      "Text": "Инвестиции",
+      "Icon": "bar",
+      "SortOrder": 5,
+      "Items": [
+        {
+          "Name": "brokerage_account",
+          "Text": "Брокерский счёт",
+          "Href": "#",
+          "SortOrder": 1
+        },
+        {
+          "Name": "iis",
+          "Text": "ИИС",
+          "Href": "#",
+          "SortOrder": 2
+        },
+        {
+          "Name": "securities_catalog",
+          "Text": "Каталог бумаг",
+          "Href": "#",
+          "SortOrder": 3
+        },
+        {
+          "Name": "currency_exchange",
+          "Text": "Обмен валюты на бирже",
+          "Href": "#",
+          "SortOrder": 4
+        },
+        {
+          "Name": "precious_securities",
+          "Text": "Драгоценные бумаги",
+          "Href": "#",
+          "SortOrder": 5
+        },
+        {
+          "Name": "tariffs",
+          "Text": "Тарифы",
+          "Href": "#",
+          "SortOrder": 6
+        }
+      ]
+    },
+    {
+      "Name": "insurance",
+      "Text": "Страхование",
+      "Icon": "shield",
+      "SortOrder": 6,
+      "Items": [
+        {
+          "Name": "osago",
+          "Text": "ОСАГО",
+          "Href": "#",
+          "SortOrder": 1
+        },
+        {
+          "Name": "kasko",
+          "Text": "Каско",
+          "Href": "#",
+          "SortOrder": 2
+        },
+        {
+          "Name": "health_insurance",
+          "Text": "Здоровье",
+          "Href": "#",
+          "SortOrder": 3
+        },
+        {
+          "Name": "roadside_assistance",
+          "Text": "Помощь на дорогах",
+          "Href": "#",
+          "SortOrder": 4
+        },
+        {
+          "Name": "home_insurance",
+          "Text": "Для дома и квартиры",
+          "Href": "#",
+          "SortOrder": 5
+        }
+      ]
+    },
+    {
+      "Name": "journey",
+      "Text": "Путешествия",
+      "Icon": "plane",
+      "SortOrder": 7,
+      "Items": [
+        {
+          "Name": "flight_tickets",
+          "Text": "Авиабилеты",
+          "Href": "#",
+          "SortOrder": 1
+        },
+        {
+          "Name": "tours",
+          "Text": "Туры",
+          "Href": "#",
+          "SortOrder": 2
+        },
+        {
+          "Name": "trips",
+          "Text": "Поездки",
+          "Href": "#",
+          "SortOrder": 3
+        },
+        {
+          "Name": "hotels",
+          "Text": "Отели",
+          "Href": "#",
+          "SortOrder": 4
+        }
+      ]
+    },
+    {
+      "Name": "services",
+      "Text": "Сервисы",
+      "Icon": "services",
+      "SortOrder": 8,
+      "Items": [
+        {
+          "Name": "mobile_app",
+          "Text": "Мобильное приложение",
+          "Href": "#",
+          "SortOrder": 1
+        },
+        {
+          "Name": "card_readiness_check",
+          "Text": "Проверка готовности карты",
+          "Href": "#",
+          "SortOrder": 2
+        },
+        {
+          "Name": "certificates_statements",
+          "Text": "Справки и выписки",
+          "Href": "#",
+          "SortOrder": 3
+        }
+      ]
+    }
+  ]
+}

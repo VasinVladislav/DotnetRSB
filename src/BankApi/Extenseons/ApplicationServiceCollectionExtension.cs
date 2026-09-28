@@ -28,7 +28,9 @@ public static class ApplicationServiceCollectionExtension
         // СНАЧАЛА регистрируем контекст базы данных PostgreSQL
         services.AddDbContext<BankDbContext>(options => options.UseNpgsql(connectionString));
         services.AddScoped<HeaderMenuStorage>(); // Регистрируем хранилище
+        services.AddScoped<LocationMenuStorage>();
         services.AddScoped<HeaderMenuInitializer>();
+        services.AddScoped<LocationMenuInitializer>();
         return services;
     }
 }

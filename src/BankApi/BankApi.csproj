@@ -15,5 +15,15 @@
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="9.0.4" />
     <PackageReference Include="Scalar.AspNetCore" Version="2.17.8" />
   </ItemGroup>
-
+  <!-- Указываем .NET автоматически копировать JSON файлы из новой папки HeaderMenuData -->
+  <ItemGroup>
+    <None Update="DataSeed\HeaderMenuData\*.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="DataSeed\LocationMenuData\regions.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
 </Project>

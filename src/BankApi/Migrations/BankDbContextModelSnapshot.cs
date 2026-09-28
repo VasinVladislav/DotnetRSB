@@ -110,6 +110,53 @@ namespace BankApi.Migrations
                     b.ToTable("LevelTwoMenu");
                 });
 
+            modelBuilder.Entity("LocationCity", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("LocationRegionId")
+                        .HasColumnType("integer");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("LocationRegionId");
+
+                    b.ToTable("LocationCity");
+                });
+
+            modelBuilder.Entity("LocationRegion", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("integer");
+
+                    NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.Property<string>("Text")
+                        .IsRequired()
+                        .HasColumnType("text");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("LocationRegion");
+                });
+
             modelBuilder.Entity("BankApi.Models.LevelThreeMenu", b =>
                 {
                     b.HasOne("BankApi.Models.LevelTwoMenu", null)
@@ -128,6 +175,15 @@ namespace BankApi.Migrations
                         .IsRequired();
                 });
 
+            modelBuilder.Entity("LocationCity", b =>
+                {
+                    b.HasOne("LocationRegion", null)
+                        .WithMany("Cities")
+                        .HasForeignKey("LocationRegionId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
             modelBuilder.Entity("BankApi.Models.LevelOneMenu", b =>
                 {
                     b.Navigation("Items");
@@ -136,6 +192,11 @@ namespace BankApi.Migrations
             modelBuilder.Entity("BankApi.Models.LevelTwoMenu", b =>
                 {
                     b.Navigation("Items");
+                });
+
+            modelBuilder.Entity("LocationRegion", b =>
+                {
+                    b.Navigation("Cities");
                 });
 #pragma warning restore 612, 618
         }

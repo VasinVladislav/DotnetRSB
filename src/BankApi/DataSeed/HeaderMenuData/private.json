@@ -1,0 +1,159 @@
+{
+    "Name": "private",
+    "Text": "Private Banking",
+    "SortOrder": 3,
+    "Items": [
+        {
+            "Name": "banking",
+            "Text": "Банковские услуги",
+            "Icon": "premiumBankIcon",
+            "SortOrder": 1,
+            "Items": [
+                {
+                    "Name": "premium_cashback_cards",
+                    "Text": "Премиальные карты с кэшбэком",
+                    "Href": "#",
+                    "SortOrder": 1
+                },
+                {
+                    "Name": "high_rate_deposits",
+                    "Text": "Вклады с повышенной ставкой",
+                    "Href": "#",
+                    "SortOrder": 2
+                },
+                {
+                    "Name": "borderless_currency_transfers",
+                    "Text": "Валютные переводы без границ",
+                    "Href": "#",
+                    "SortOrder": 3
+                },
+                {
+                    "Name": "safe_deposit_boxes",
+                    "Text": "Сейфовые ячейки",
+                    "Href": "#",
+                    "SortOrder": 4
+                },
+                {
+                    "Name": "individual_lending_terms",
+                    "Text": "Индивидуальные условия кредитования",
+                    "Href": "#",
+                    "SortOrder": 5
+                }
+            ]
+        },
+        {
+            "Name": "wealth",
+            "Text": "Инвестиции",
+            "Icon": "diamondIcon",
+            "SortOrder": 2,
+            "Items": [
+                {
+                    "Name": "trust_management",
+                    "Text": "Доверическое управление",
+                    "Href": "#",
+                    "SortOrder": 1
+                },
+                {
+                    "Name": "structured_products",
+                    "Text": "Структурные продукты",
+                    "Href": "#",
+                    "SortOrder": 2
+                },
+                {
+                    "Name": "international_markets_access",
+                    "Text": "Доступ к международным рынкам",
+                    "Href": "#",
+                    "SortOrder": 3
+                },
+                {
+                    "Name": "alternative_investments",
+                    "Text": "Альтернативные инвестиции (арт, вино)",
+                    "Href": "#",
+                    "SortOrder": 4
+                },
+                {
+                    "Name": "unit_linked_insurance",
+                    "Text": "Инвестиционное страхование жизни",
+                    "Href": "#",
+                    "SortOrder": 5
+                }
+            ]
+        },
+        {
+            "Name": "consulting",
+            "Text": "Консалтинг",
+            "Icon": "strategyIcon",
+            "SortOrder": 3,
+            "Items": [
+                {
+                    "Name": "tax_consulting",
+                    "Text": "Налоговое консультирование",
+                    "Href": "#",
+                    "SortOrder": 1
+                },
+                {
+                    "Name": "family_office_legal",
+                    "Text": "Юридическая поддержка (Family Office)",
+                    "Href": "#",
+                    "SortOrder": 2
+                },
+                {
+                    "Name": "asset_inheritance",
+                    "Text": "Наследование активов",
+                    "Href": "#",
+                    "SortOrder": 3
+                },
+                {
+                    "Name": "currency_control",
+                    "Text": "Валютный контроль",
+                    "Href": "#",
+                    "SortOrder": 4
+                },
+                {
+                    "Name": "cfc_reporting",
+                    "Text": "Подготовка отчетности для КИК",
+                    "Href": "#",
+                    "SortOrder": 5
+                }
+            ]
+        },
+        {
+            "Name": "lifestyle",
+            "Text": "Лайфстайл",
+            "Icon": "conciergeIcon",
+            "SortOrder": 4,
+            "Items": [
+                {
+                    "Name": "concierge_24_7",
+                    "Text": "Персональный консьерж 24/7",
+                    "Href": "#",
+                    "SortOrder": 1
+                },
+                {
+                    "Name": "airport_lounge_access",
+                    "Text": "Доступ в бизнес-залы аэропортов",
+                    "Href": "#",
+                    "SortOrder": 2
+                },
+                {
+                    "Name": "hotel_restaurant_privileges",
+                    "Text": "Привилегии в отелях и ресторанах",
+                    "Href": "#",
+                    "SortOrder": 3
+                },
+                {
+                    "Name": "jet_yacht_charter",
+                    "Text": "Аренда бизнес-джетов и яхт",
+                    "Href": "#",
+                    "SortOrder": 4
+                },
+                {
+                    "Name": "private_events_invitations",
+                    "Text": "Приглашения на закрытые мероприятия",
+                    "Href": "#",
+                    "SortOrder": 5
+                }
+            ]
+        }
+    ]
+}

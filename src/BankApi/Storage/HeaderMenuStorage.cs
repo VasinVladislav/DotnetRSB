@@ -15,6 +15,38 @@ public class HeaderMenuStorage
         await context.SaveChangesAsync();
         return newMenu;
     }
+    public async Task<LevelTwoMenu?> AddMenuTwo(int id, LevelTwoMenu newMenu)
+    {
+        // Ищем родительский заголовок вместе с его коллекцией
+        var levelOneMenu = await context.LevelOneMenu
+        .Include(t => t.Items)
+        .FirstOrDefaultAsync(t => t.Id == id);
+
+        if (levelOneMenu == null)
+        {
+            return null;
+        }
+
+        levelOneMenu.Items.Add(newMenu);
+        await context.SaveChangesAsync();
+        return newMenu;
+    }
+    public async Task<LevelThreeMenu?> AddMenuThree(int id, LevelThreeMenu newMenu)
+    {
+        // Ищем напрямую категорию 2-го уровня по её уникальному Id
+        var levelTwoMenu = await context.LevelTwoMenu
+            .Include(t => t.Items)
+            .FirstOrDefaultAsync(t => t.Id == id);
+
+        if (levelTwoMenu == null)
+        {
+            return null;
+        }
+
+        levelTwoMenu.Items.Add(newMenu);
+        await context.SaveChangesAsync();
+        return newMenu;
+    }
     public async Task<List<LevelOneMenu>> GetMenu()
     {
         return await context.LevelOneMenu
