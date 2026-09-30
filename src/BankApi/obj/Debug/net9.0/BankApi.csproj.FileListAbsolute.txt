@@ -120,12 +120,6 @@ C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\scopedcss
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets.build.json
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets.development.json
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets.build.endpoints.json
-C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets\msbuild.BankApi.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets\msbuild.BankApi.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
-C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets\msbuild.build.BankApi.props
-C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.BankApi.props
-C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.BankApi.props
-C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets.pack.json
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\BankApi.csproj.Up2Date
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\BankApi.dll
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\refint\BankApi.dll
@@ -133,3 +127,8 @@ C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\BankApi.p
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\BankApi.genruntimeconfig.cache
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\ref\BankApi.dll
 C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\bin\Debug\net9.0\DataSeed\LocationMenuData\regions.json
+C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\rpswa.dswa.cache.json
+C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\rjimswa.dswa.cache.json
+C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\rjsmrazor.dswa.cache.json
+C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\rjsmcshtml.dswa.cache.json
+C:\Users\Vladislav\source\repos\DotnetRSB\src\BankApi\obj\Debug\net9.0\staticwebassets.build.json.cache
