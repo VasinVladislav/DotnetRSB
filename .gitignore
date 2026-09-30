@@ -1,6 +1,8 @@
 # Временные папки компиляции (Самое главное!)
 **/bin/
 **/obj/
+src/BankApi/bin/
+src/BankApi/obj/
 
 # Настройки IDE (VS Code и Rider)
 .vscode/
