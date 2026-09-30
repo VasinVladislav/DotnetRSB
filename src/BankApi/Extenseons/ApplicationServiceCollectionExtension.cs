@@ -15,12 +15,12 @@ public static class ApplicationServiceCollectionExtension
             {
                 policy.WithOrigins(
                         "http://localhost:5173",  // Локальный адрес React (Vite)
-                        "http://localhost:3000",  // На случай, если запустите на Create React App
+                        "http://localhost:3000",  // На случай, запустить через Create React App
                         "https://react-rsb.vercel.app" // Реальный URL сайта с Vercel
                       )
                       .AllowAnyMethod()   // Разрешает любые HTTP-методы: GET, POST, PUT, DELETE
                       .AllowAnyHeader()  // Разрешает любые HTTP-заголовки (Content-Type, Authorization и т.д.)
-                      .AllowCredentials(); // Понадобится в будущем, если будете работать с Cookie/Сессиями
+                      .AllowCredentials(); // Понадобится в будущем, если работать с Cookie/Сессиями
             });
         });
         var connectionString = configuration.GetConnectionString("DefaultConnection"); // Получаем строку подключения к хранилищу в Supabase из appsettings.json
