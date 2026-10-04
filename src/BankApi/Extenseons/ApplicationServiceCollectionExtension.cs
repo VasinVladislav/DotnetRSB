@@ -29,6 +29,7 @@ public static class ApplicationServiceCollectionExtension
         services.AddDbContext<BankDbContext>(options => options.UseNpgsql(connectionString));
         services.AddScoped<HeaderMenuStorage>(); // Регистрируем хранилище
         services.AddScoped<LocationMenuStorage>();
+        services.AddScoped<UserStorage>();
         services.AddScoped<HeaderMenuInitializer>();
         services.AddScoped<LocationMenuInitializer>();
         return services;
