@@ -42,7 +42,7 @@ public class UserStorage
         BankUser? bankUser = await GetUserByPhone(registerUser);
         if (bankUser == null) return false;
         bankUser.Phone = CleanPhone(registerUser.Phone);
-        bankUser.PasswordHash = registerUser.Password;
+        bankUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(registerUser.Password);
         bankUser.FirstName = registerUser.FirstName;
         bankUser.Status = UserStatus.Active;
         await context.SaveChangesAsync();

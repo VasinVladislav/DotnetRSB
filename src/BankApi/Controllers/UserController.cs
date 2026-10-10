@@ -47,7 +47,7 @@ public class UserController : BaseController
         {
             return BadRequest(new { message = "Некорректный запрос авторизации" });
         }
-        if (bankUser.PasswordHash != login.Password)
+        if (!BCrypt.Net.BCrypt.Verify(login.Password, bankUser.PasswordHash))
         {
             return BadRequest(new { message = "Неверный пароль" });
         }
