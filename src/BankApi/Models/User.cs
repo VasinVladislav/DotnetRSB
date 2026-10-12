@@ -23,7 +23,12 @@ namespace BankApi.Models
         // Поля ниже могут быть null на начальных этапах воронки регистрации
         public string? PasswordHash { get; set; } 
 
-        public string? FirstName { get; set; } // Имя для приветствия
+        public string? LastName { get; set; }      // Фамилия
+        public string? FirstName { get; set; }     // Имя
+        public string? MiddleName { get; set; }    // Отчество (может быть null)
+        public bool HasNoMiddleName { get; set; }  // Галочка "Нет отчества"
+        public string? Email { get; set; }         // Почта
+        public DateTime? BirthDate { get; set; }   // Дата рождения
 
         [Required]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

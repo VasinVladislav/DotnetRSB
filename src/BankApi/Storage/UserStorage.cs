@@ -43,7 +43,12 @@ public class UserStorage
         if (bankUser == null) return false;
         bankUser.Phone = CleanPhone(registerUser.Phone);
         bankUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(registerUser.Password);
+        bankUser.LastName = registerUser.LastName;
         bankUser.FirstName = registerUser.FirstName;
+        bankUser.MiddleName = registerUser.HasNoMiddleName ? null : registerUser.MiddleName;
+        bankUser.HasNoMiddleName = registerUser.HasNoMiddleName;
+        bankUser.Email = registerUser.Email;
+        bankUser.BirthDate = DateTime.SpecifyKind(registerUser.BirthDate, DateTimeKind.Utc);
         bankUser.Status = UserStatus.Active;
         await context.SaveChangesAsync();
         return true;

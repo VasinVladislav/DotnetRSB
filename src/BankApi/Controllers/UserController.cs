@@ -23,7 +23,7 @@ public class UserController : BaseController
             return Ok(new { action = "register_profile", message = "Номер подтвержден. Заполните профиль." });
         }
         // Сценарий Б: Пользователь бросил заполнение профиля в прошлый раз
-        if (bankUser.Status == UserStatus.PendingDetails)
+        if (bankUser.Status == UserStatus.PhoneVerified)
         {
             return Ok(new { action = "register_profile", message = "Продолжите регистрацию профиля." });
         }
