@@ -32,5 +32,7 @@ namespace BankApi.Models
 
         [Required]
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public string? SessionToken { get; set; } // Хранилище уникального токена сессии
+
     }
 }

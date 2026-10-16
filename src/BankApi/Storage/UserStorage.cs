@@ -37,10 +37,10 @@ public class UserStorage
         string cleanPhone = CleanPhone(phone.Phone);
         return await context.BankUsers.FirstOrDefaultAsync(u => u.Phone == cleanPhone);
     }
-    public async Task<bool> UpdateUser(RegisterUserRequest registerUser)
+    public async Task<(bool isSuccess, string? token)> UpdateUser(RegisterUserRequest registerUser)
     {
         BankUser? bankUser = await GetUserByPhone(registerUser);
-        if (bankUser == null) return false;
+        if (bankUser == null) return (false, null);
         bankUser.Phone = CleanPhone(registerUser.Phone);
         bankUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(registerUser.Password);
         bankUser.LastName = registerUser.LastName;
@@ -49,9 +49,18 @@ public class UserStorage
         bankUser.HasNoMiddleName = registerUser.HasNoMiddleName;
         bankUser.Email = registerUser.Email;
         bankUser.BirthDate = DateTime.SpecifyKind(registerUser.BirthDate, DateTimeKind.Utc);
+
+        string sessionToken = Guid.NewGuid().ToString();
+        bankUser.SessionToken = sessionToken;
+
         bankUser.Status = UserStatus.Active;
         await context.SaveChangesAsync();
-        return true;
+        return (true, sessionToken);
+    }
+    public async Task<BankUser?> GetUserBySessionToken(string token)
+    {
+        // Ищем в Supabase пользователя, у которого совпадает токен активной сессии
+        return await context.BankUsers.FirstOrDefaultAsync(u => u.SessionToken == token);
     }
     public async Task<bool> ChangeStatus(int id, UserStatus status)
     {
@@ -61,4 +70,33 @@ public class UserStorage
         await context.SaveChangesAsync();
         return true;
     }
+    public async Task<string> UpdateSessionToken(BankUser bankUser)
+    {
+        string sessionToken = Guid.NewGuid().ToString();
+        bankUser.SessionToken = sessionToken;
+        await context.SaveChangesAsync();
+        return sessionToken;
+    }
+    public async Task<bool> ChangePass(BankUser bankUser, ChangePasswordRequest passRequest)
+    {
+
+        // Сверяем введенный старый пароль с хэшем BCrypt в базе данных Supabase
+        if (!BCrypt.Net.BCrypt.Verify(passRequest.OldPassword, bankUser.PasswordHash))
+        {
+            return false;
+        }
+
+        // Если старый пароль верный, хэшируем НОВЫЙ сложный пароль
+        bankUser.PasswordHash = BCrypt.Net.BCrypt.HashPassword(passRequest.NewPassword);
+
+        // Просим хранилище сохранить изменения в базу данных Supabase
+        await context.SaveChangesAsync();
+        return true;
+    }
+    public async Task ChangeEmail(BankUser bankUser, ChangeEmailRequest emailRequest)
+    {
+        bankUser.Email = emailRequest.NewEmail;
+        await context.SaveChangesAsync();
+    }
+
 }

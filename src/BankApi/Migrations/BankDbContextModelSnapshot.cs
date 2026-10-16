@@ -57,6 +57,9 @@ namespace BankApi.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
+                    b.Property<string>("SessionToken")
+                        .HasColumnType("text");
+
                     b.Property<int>("Status")
                         .HasColumnType("integer");
 
