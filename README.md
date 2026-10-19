@@ -1,8 +1,8 @@
-# 🏦 BankApi (.NET Core Backend for Russian Standard Bank Clone)
+# BankApi (.NET Core Backend for Russian Standard Bank Clone)
 
 Веб-API коммерческого интернет-банка, спроектированное по трехслойной архитектуре (Repository/Storage Pattern). Обеспечивает безопасную авторизацию, регистрацию клиентов, сессионный контроль и интеграцию с облачной базой данных **Supabase (PostgreSQL)**.
 
-## 🚀 Ключевые фичи и технологии
+## Ключевые фичи и технологии
 
 - **Платформа:** `.NET 9.0 / .NET Core Web API`
 - **СУБД:** `PostgreSQL` (развернута на облачной платформе **Supabase**)
@@ -48,3 +48,33 @@
 - **Тело запроса:** `{ "newEmail": "..." }`
 
 ---
+
+## 💻 Локальный запуск проекта
+
+### 1. Предварительные требования
+- Установленный SDK `.NET 9.0`
+- Установленные глобальные инструменты EF Core:
+  ```bash
+  dotnet tool install --global dotnet-ef
+  ```
+
+### 2. Настройка подключения
+В файле `appsettings.Development.json` убедитесь в наличии строки подключения к вашей базе данных Supabase:
+```json
+{
+  "ConnectionStrings": {
+    "DefaultConnection": "Host=://supabase.com;Database=postgres;Username=postgres...;"
+  }
+}
+```
+
+### 3. Применение миграций к БД
+```bash
+dotnet ef database update
+```
+
+### 4. Запуск сервера
+```bash
+dotnet run
+```
+Сервер запустится локально и начнет слушать HTTP-запросы (порт будет указан в консоли, например `http://localhost:5000`).
