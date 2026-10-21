@@ -8,16 +8,18 @@ public static class ApplicationServiceCollectionExtension
         // 1. РЕГИСТРАЦИЯ СЕРВИСОВ (Контейнер зависимостей)
         services.AddOpenApi();
         services.AddControllers(); // Включаем поддержку контроллеров вместо Minimal API
-                                   // Добавляем CORS-политику в контейнер зависимостей
+
+        //  Читаем массив разрешенных адресов из конфигурационного файла appsettings.json
+        var allowedOrigins = configuration
+            .GetSection("CorsSettings:AllowedOrigins")
+            .Get<string[]>() ?? Array.Empty<string>();
+
+        // 2. Динамически применяем политику CORS
         services.AddCors(options =>
         {
             options.AddPolicy("BankLandingPolicy", policy =>
             {
-                policy.WithOrigins(
-                        "http://localhost:5173",  // Локальный адрес React (Vite)
-                        "http://localhost:3000",  // На случай, запустить через Create React App
-                        "https://react-rsb.vercel.app" // Реальный URL сайта с Vercel
-                      )
+                policy.WithOrigins(allowedOrigins) // Передаем прочитанный из JSON массив строк                
                       .AllowAnyMethod()   // Разрешает любые HTTP-методы: GET, POST, PUT, DELETE
                       .AllowAnyHeader()  // Разрешает любые HTTP-заголовки (Content-Type, Authorization и т.д.)
                       .AllowCredentials(); // Понадобится в будущем, если работать с Cookie/Сессиями
